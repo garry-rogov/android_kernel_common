@@ -4028,8 +4028,7 @@ out:
 		ufshcd_enable_intr(hba, UIC_COMMAND_COMPL);
 	if (ret) {
 		dev_err(hba->dev,
-			"%s: Changing link power status failed (%d). Scheduling error handler\n",
-			__func__, ret);
+			"%s: Changing link power status failed (%d). Scheduling error handler\n", __func__, ret);
 		ufshcd_set_link_broken(hba);
 		ufshcd_schedule_eh_work(hba);
 	}
